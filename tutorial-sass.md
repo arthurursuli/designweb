@@ -49,7 +49,7 @@ O Sass recompila sozinho toda vez que você salvar.
 São “apelidos” para guardar valores (cor, fonte, tamanho).
 
 Exemplo:
-```
+```sass
 $primary-color: #3498db;
 $font-stack: 'Arial', sans-serif;
 
@@ -58,6 +58,13 @@ body {
   font-family: $font-stack;
 }
 
+```
+-> resultado da saída CSS
+```css
+body {
+  background: #3498db;
+  font-family: "Arial", sans-serif;
+}
 ```
 **Vantagens:**
 - Consistência visual (mesmas cores/fontes em todo site).
@@ -125,7 +132,7 @@ css/
 - Melhor organização (cada arquivo com sua função).
 - Facilita manutenção e entendimento do projeto.
 
-##🔹 6. Mixins
+## 🔹 6. Mixins
 **O que são:**
 São blocos de código reutilizáveis que você cria uma vez e aplica em vários lugares.
 
@@ -143,11 +150,9 @@ header {
 ```
 Vantagens:
 
-Reutiliza código sem copiar e colar.
+Reutiliza código sem copiar e colar. Ideal para estilos repetitivos (centralização, botões, sombras).
 
-Ideal para estilos repetitivos (centralização, botões, sombras).
-
-##7. Extends
+## 7. Extends
 
 **O que é:**
 Permite **herdar estilos de outra classe.**
