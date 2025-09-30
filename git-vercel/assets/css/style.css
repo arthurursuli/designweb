@@ -1,9 +1,16 @@
 body {
+  margin: 1em;
   background: #080808;
 }
 
-.header .menu-navegacao {
+.header {
+  background: #1B1B1B;
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+}
+.header .menu-navegacao a {
   color: #9C9C9C;
+  text-decoration: none;
 }
 .header .menu-social {
   color: #9C9C9C;
@@ -14,8 +21,8 @@ main .perfil h1 {
   font-family: "Raleway", sans-serif;
 }
 main .perfil h3 {
-  color: #FFFFFF;
-  font-family: "Raleway", sans-serif;
+  color: #9C9C9C;
+  font-family: "IBM Plex Mono", monospace;
 }
 main .perfil p {
   color: #9C9C9C;
@@ -25,10 +32,17 @@ main .perfil button {
   color: #FFFFFF;
   padding: 1em 3em;
   border: 1px solid #62BA1B;
-  background: #62BA1B;
+  background: #3F8E00;
+  border-radius: 10%;
+  box-shadow: 1px solid #FFFFFF;
+}
+
+footer .last-jobs {
+  color: #FFFFFF;
 }
 
 .lista-sem-estilo {
+  text-decoration: none;
   padding: 0;
   list-style: none;
 }
@@ -52,7 +66,7 @@ main .perfil button {
   justify-content: flex-start;
 }
 
-.alinhar-h-esquerda {
+.alinhar-h-direita {
   justify-content: flex-end;
 }
 
@@ -60,7 +74,7 @@ main .perfil button {
   align-items: flex-start;
 }
 
-.alinhar-v-esquerda {
+.alinhar-v-direita {
   align-items: flex-end;
 }
 
@@ -74,6 +88,10 @@ main .perfil button {
 
 .dividir-extremidades {
   justify-content: space-between;
+}
+
+.flutuar {
+  float: left;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -18,7 +18,7 @@ $break-watch: 400px;
     justify-content: flex-start;
 }
 
-.alinhar-h-esquerda{
+.alinhar-h-direita{
     justify-content: flex-end;
 }
 
@@ -26,7 +26,7 @@ $break-watch: 400px;
     align-items: flex-start;
 }
 
-.alinhar-v-esquerda{
+.alinhar-v-direita{
     align-items: flex-end;
 }
     
@@ -40,4 +40,8 @@ $break-watch: 400px;
 
 .dividir-extremidades{
     justify-content: space-between;
+}
+
+.flutuar{
+    float: left;
 }
