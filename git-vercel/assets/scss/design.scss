@@ -1,5 +1,70 @@
+$font-titulo: "Raleway", sans-serif;
+$font-texto: "IBM Plex Mono", monospace;
+
 $cor-bg-body: #080808;
+$cor-text-style: #9C9C9C;
+$cor-text-title: #FFFFFF;
+$cor-border-button: #62BA1B;
 
 body {
-    background-color: $cor-bg-body;
+    background: $cor-bg-body;
+}
+
+.header{
+
+    .menu-navegacao{
+        color: $cor-text-style;
+    }
+    
+    .menu-social{
+        color: $cor-text-style;
+    }
+
+}
+
+main{
+    .perfil{
+        h1{
+            color: $cor-text-title;
+            font-family: $font-titulo;
+        }
+        h3{
+            color: $cor-text-title;
+            font-family: $font-titulo;
+        }
+        p{
+            color: $cor-text-style;
+            font-family: $font-texto;
+        }
+        button{
+            color: $cor-text-title;
+            padding: 1em 3em;
+            border: 1px solid $cor-border-button;
+            background: $cor-border-button;
+        }
+    }
+}
+.left{
+
+}
+
+.right{
+
+}
+
+.last-jobs{
+
+}
+
+.job-list{
+}
+
+.lista-sem-estilo{
+    padding: 0;
+    list-style: none;
+}
+
+.foto-com-borda{
+    padding: 0;
+    border-radius: 100%;
 }
