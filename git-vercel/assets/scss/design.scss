@@ -14,26 +14,43 @@ body {
 }
 
 .header{
-    background: $cor-bg-header;
-    border-bottom-right-radius: 5%;
-    border-bottom-left-radius: 5%;
+    height: 20vh;
 
-    .menu-navegacao{
+    nav{
+        background: $cor-bg-header;
+        border-bottom-right-radius: 5%;
+        border-bottom-left-radius: 5%;
+        font-size: 1em;
+        align-items: center;
 
-        a{
+        .menu-navegacao{
+            margin-right: 5vw;
+
+            a{
             color: $cor-text-style;
             text-decoration: none;
-        }
+            margin: 2vw;
+            }
 
-    }
+        }
     
-    .menu-social{
-        color: $cor-text-style;
+        .menu-social{
+            margin-left: 5vw;
+
+            a{
+                color: $cor-text-style;
+                margin: 2vw;
+            }
+
+        }
+        
     }
 
 }
 
 main{
+    height: 60vh;
+
     .perfil{
         h1{
             color: $cor-text-title;
@@ -46,22 +63,36 @@ main{
         p{
             color: $cor-text-style;
             font-family: $font-texto;
+            padding-right: 6vw;
         }
         button{
             color: $cor-text-title;
-            padding: 1em 3em;
             border: 1px solid $cor-border-button;
             background: $cor-bg-button;
             border-radius: 10%;
             box-shadow: 1px solid $cor-text-title;
+            padding: 1vh;
+            a{
+                font-family: $font-titulo;
+                text-decoration: none;
+                color: $cor-text-title;
+                padding: 2vw;
+            }
         }
     }
 }
 
 footer{
+    height: 20vh;
 
     .last-jobs{
+        align-items: center;
         color: $cor-text-title;
+        justify-content: space-between;
+        img{
+            padding-left: 4vw;
+        }
+        
     }
 
 }
