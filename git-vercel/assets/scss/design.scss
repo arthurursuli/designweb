@@ -9,7 +9,7 @@ $cor-border-button: #62BA1B;
 $cor-bg-button: #3F8E00;
 
 body {
-    margin: 1em;
+    margin: 2vi;
     background: $cor-bg-body;
 }
 
@@ -20,26 +20,26 @@ body {
         background: $cor-bg-header;
         border-bottom-right-radius: 5%;
         border-bottom-left-radius: 5%;
-        font-size: 1em;
+        font-size: 1vi;
         align-items: center;
 
         .menu-navegacao{
-            margin-right: 5vw;
+            margin-right: 15vi;
 
             a{
             color: $cor-text-style;
             text-decoration: none;
-            margin: 2vw;
+            margin: 2vi;
             }
 
         }
     
         .menu-social{
-            margin-left: 5vw;
+            margin-left: 15vi;
 
             a{
                 color: $cor-text-style;
-                margin: 2vw;
+                margin: 2vi;
             }
 
         }
@@ -55,15 +55,18 @@ main{
         h1{
             color: $cor-text-title;
             font-family: $font-titulo;
+            font-size: 3vi;
         }
         h3{
             color: $cor-text-style;
             font-family: $font-texto;
+            font-size: 2vi;
         }
         p{
             color: $cor-text-style;
             font-family: $font-texto;
             padding-right: 6vw;
+            font-size: 1vi;
         }
         button{
             color: $cor-text-title;
@@ -76,6 +79,7 @@ main{
                 font-family: $font-titulo;
                 text-decoration: none;
                 color: $cor-text-title;
+                font-size: 1vi;
                 padding: 2vw;
             }
         }
@@ -84,12 +88,14 @@ main{
 
 footer{
     height: 20vh;
-
+    font-size: 1vi;
     .last-jobs{
         align-items: center;
         color: $cor-text-title;
         justify-content: space-between;
         img{
+            height: 7vw;
+            width: 7vw;
             padding-left: 4vw;
         }
         
@@ -104,6 +110,13 @@ footer{
 }
 
 .foto-com-borda{
+    height: 20vw;
+    width: 20vw;
     padding: 0;
     border-radius: 100%;
+}
+
+.foto-nav{
+    height: 1.5vw;
+    width: 1.5vw;
 }
