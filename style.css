@@ -1,5 +1,5 @@
 body {
-  margin: 1em;
+  margin: 2vi;
   background: #080808;
 }
 
@@ -10,23 +10,23 @@ body {
   background: #1B1B1B;
   border-bottom-right-radius: 5%;
   border-bottom-left-radius: 5%;
-  font-size: 1em;
+  font-size: 1vi;
   align-items: center;
 }
 .header nav .menu-navegacao {
-  margin-right: 5vw;
+  margin-right: 15vi;
 }
 .header nav .menu-navegacao a {
   color: #9C9C9C;
   text-decoration: none;
-  margin: 2vw;
+  margin: 2vi;
 }
 .header nav .menu-social {
-  margin-left: 5vw;
+  margin-left: 15vi;
 }
 .header nav .menu-social a {
   color: #9C9C9C;
-  margin: 2vw;
+  margin: 2vi;
 }
 
 main {
@@ -35,15 +35,18 @@ main {
 main .perfil h1 {
   color: #FFFFFF;
   font-family: "Raleway", sans-serif;
+  font-size: 3vi;
 }
 main .perfil h3 {
   color: #9C9C9C;
   font-family: "IBM Plex Mono", monospace;
+  font-size: 2vi;
 }
 main .perfil p {
   color: #9C9C9C;
   font-family: "IBM Plex Mono", monospace;
   padding-right: 6vw;
+  font-size: 1vi;
 }
 main .perfil button {
   color: #FFFFFF;
@@ -57,11 +60,13 @@ main .perfil button a {
   font-family: "Raleway", sans-serif;
   text-decoration: none;
   color: #FFFFFF;
+  font-size: 1vi;
   padding: 2vw;
 }
 
 footer {
   height: 20vh;
+  font-size: 1vi;
 }
 footer .last-jobs {
   align-items: center;
@@ -69,6 +74,8 @@ footer .last-jobs {
   justify-content: space-between;
 }
 footer .last-jobs img {
+  height: 7vw;
+  width: 7vw;
   padding-left: 4vw;
 }
 
@@ -79,8 +86,15 @@ footer .last-jobs img {
 }
 
 .foto-com-borda {
+  height: 20vw;
+  width: 20vw;
   padding: 0;
   border-radius: 100%;
+}
+
+.foto-nav {
+  height: 1.5vw;
+  width: 1.5vw;
 }
 
 .container {
@@ -113,6 +127,10 @@ footer .last-jobs img {
   flex-direction: column;
 }
 
+.alinhar-coluna-reverso {
+  flex-direction: column-reverse;
+}
+
 .alinhar-linha {
   flex-direction: row;
 }
@@ -125,4 +143,55 @@ footer .last-jobs img {
   float: left;
 }
 
-/*# sourceMappingURL=style.css.map */
+@media (max-width: 667px) {
+  .container {
+    max-width: 786px;
+  }
+  .header nav {
+    font-size: 2vi;
+  }
+  .header nav .menu-navegacao {
+    margin-right: 0vi;
+  }
+  .header nav .menu-navegacao a {
+    margin: 1vi;
+  }
+  .header nav .menu-social {
+    margin-left: 0vi;
+  }
+  .header nav .menu-social a {
+    margin: 1vi;
+  }
+  main .perfil {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  main .perfil h1 {
+    font-size: 6vi;
+  }
+  main .perfil h3 {
+    font-size: 4vi;
+  }
+  main .perfil p {
+    font-size: 2vi;
+  }
+  main .perfil button a {
+    font-size: 2vi;
+  }
+  footer {
+    font-size: 2vi;
+    padding-top: 30vw;
+  }
+  footer .last-jobs img {
+    height: 14vw;
+    width: 14vw;
+  }
+  .foto-com-borda {
+    height: 50vw;
+    width: 50vw;
+  }
+  .foto-nav {
+    height: 2.5vw;
+    width: 2.5vw;
+  }
+}/*# sourceMappingURL=style.css.map */
