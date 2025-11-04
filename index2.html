@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header>
+        <nav class="flex justify-between p-[1vw] bg-gray-100 border-b-1 border-gray-500/50">
+            <img src="img/Logo1.svg" alt="" class="cursor-pointer">
+            <img src="img/right.png" alt="" class="cursor-pointer">
+        </nav>
+    </header>
+    <main class="grid grid-cols-5">
+        <section class="flex flex-col p-[3vw] border-r-1 border-gray-500/50 max-w-[20vw] border-b-1 border-gray-500/50">
+            <h1 class="text-[1.5vw] font-bold text-gray-700">Canal do Cliente</h1>
+            <figure class="flex items-center hover:font-semibold hover:bg-gray-100 rounded-lg cursor-pointer">
+                <img src="img/Loja.svg" alt="" class="cursor-pointer mt-[1vw] pb-[1vw] pr-1">
+                <h3 class="text-[1vw]">Loja de projetos</h3>
+            </figure>
+            <a href="index1.html" class="text-[0.8vw] ml-[2.5vw] cursor-pointer hover:bg-blue-100 rounded-lg hover:font-semibold">Dashboard</a>
+            <a href="#" class="text-[0.8vw] ml-[2.5vw] cursor-pointer hover:bg-blue-100 rounded-lg hover:font-semibold text-blue-800 font-semibold">Compra de créditos</a>
+            <a href="#" class="text-[0.8vw] ml-[2.5vw] cursor-pointer hover:bg-blue-100 rounded-lg hover:font-semibold">Conclúidos</a>
+            <figure class="flex items-center hover:font-semibold hover:bg-gray-100 rounded-lg cursor-pointer">
+                <img src="img/Gestao.svg" alt="" class="cursor-pointer mt-[1vw] pb-5 pr-1">
+                <h3 class="text-[1vw]">Gestão de projetos</h3>
+            </figure>
+            <figure class="flex items-center hover:font-semibold hover:bg-gray-100 rounded-lg cursor-pointer">
+                <img src="img/Campanhas.svg" alt="" class="cursor-pointer mt-[1vw] pb-5 pr-1">
+                <h3 class="text-[1vw]">Campanhas</h3>
+            </figure>
+        </section>
+        <section class="grid grid-rows-1 col-span-4">
+            <section class="p-[2vw] border-b-1 border-gray-500/50">
+                <section class="flex gap-[1vw]">
+                    <small class="underline cursor-pointer font-semibold text-[0.8vw]">Loja de Projetos</small>
+                    <img src="img/Seta.svg" alt="">
+                    <small class="underline cursor-pointer font-semibold text-[0.8vw]">Comprar créditos</small>
+                    <img src="img/Seta.svg" alt="">
+                    <small class="text-[0.8vw]">Compra de Créditos</small>
+                </section>
+                <h1 class="font-bold text-[1.5vw]">Compra de Pontos Base</h1>
+                <h1 class="border-1 border-gray-100 mt-[1vw] mb-[1vw]"></h1>
+                <section class="grid grid-cols-2 gap-[1.5vw]">
+                    <div class="bg-gray-100 grid grid-rows-3 p-[1vw] rounded-lg">
+                        <b class="text-[1vw]">Limite mensal</b>
+                        <small class="text-[0.8vw]">Confira a quantidade de pontos disponível para compra</small>
+                        <img src="img/Grafico.svg" alt="" class="cursor-pointer">
+                    </div>
+                    <div class="bg-gray-100 grid grid-rows-4 p-[1vw] rounded-lg">
+                        <b class="text-[1vw]">Informações</b>
+                        <div class="flex items-center gap-[0.25vw]"><img src="img/credito1.svg" alt="" class="min-w-[1vw] max-w-[1vw]"><small class="text-[0.8vw]">Valor mínimo de</small><b class="text-[0.8vw]">100 créditos</b></div>
+                        <div class="flex items-center gap-[0.25vw]"><img src="img/credito2.svg" alt="" class="min-w-[1vw] max-w-[1vw]"><small class="text-[0.8vw]">Validade</small><b class="text-[0.8vw]">24 meses</b></div>
+                        <div class="flex items-center gap-[0.25vw]"><img src="img/credito3.svg" alt="" class="min-w-[1vw] max-w-[1vw]"><small class="text-[0.8vw]">Limite de compra mensal</small><b class="text-[0.8vw]">2.000 créditos</b></div>
+                    </div>
+                </section>
+                <section class="bg-gray-100 mt-[1vw] grid grid-cols-2 p-[1vw] rounded-lg">
+                    <div class="grid grid-rows-2">
+                        <b class="text-[1vw]">Quantidade de créditos para comprar</b>
+                        <img src="img/Seletor.svg" alt="" class="cursor-pointer min-w-[20vw] max-w-[20vw]">
+                    </div>
+                    <div class="grid grid-rows-2">
+                        <b class="text-[1vw]">Total em Reais</b>
+                        <b class="text-[2vw]">R$20.000,00</b>
+                    </div>
+                </section>
+                <section class="mt-[2vw]">
+                    <div>
+                        <b class="text-[1vw]">Mais informações sobre o produto</b><img src="" alt="">
+                        <h1 class="border-1 border-gray-100 mt-[1vw] mb-[1vw]"></h1>
+                    </div>  
+                    <b class="text-[1vw]">ATENÇÃO:</b><small class="text-[0.8vw]">A transferência dos pontos comprados para programas parceiros (Milhas) depende da elegibilidade do seu cartão de crédito. Consulte os cartões elegíveis na página do produto a partir do menu Viagens - Programas Parceiros.</small>
+                </section>
+            </section>
+            <section class="border-b-1 border-gray-500/50 flex justify-between items-center p-[0.6vw]">
+                <a href="index1.html" class="font-semibold text-blue-800 hover:bg-gray-100 rounded-lg p-[0.5vw]">Voltar</a>
+                <div>
+                    <button class="font-semibold text-blue-800 hover:bg-blue-800 hover:text-white rounded-lg p-[0.5vw] border-1 hover:shadow-lg">Adicionar ao carrinho</button>
+                    <button class="font-semibold text-white bg-blue-800 hover:bg-white hover:text-blue-800 rounded-lg p-[0.5vw] border-1 hover:shadow-lg">Continuar -></button>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

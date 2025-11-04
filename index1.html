@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header>
+        <nav class="flex justify-between p-[1vw] bg-gray-100 border-b-1 border-gray-500/50">
+            <img src="img/Logo1.svg" alt="" class="cursor-pointer">
+            <img src="img/right.png" alt="" class="cursor-pointer">
+        </nav>
+    </header>
+    <main class="grid grid-cols-5">
+        <section class="flex flex-col p-[3vw] border-r-1 border-gray-500/50 max-w-[20vw] border-b-1 border-gray-500/50">
+            <h1 class="text-[1.5vw] font-bold text-gray-700">Canal do Cliente</h1>
+            <figure class="flex items-center hover:font-semibold hover:bg-gray-100 rounded-lg cursor-pointer">
+                <img src="img/Loja.svg" alt="" class="cursor-pointer mt-[1vw] pb-[1vw] pr-1">
+                <h3 class="text-[1vw]">Loja de projetos</h3>
+            </figure>
+            <a href="#" class="text-[0.8vw] ml-[2.5vw] cursor-pointer hover:bg-blue-100 rounded-lg hover:font-semibold text-blue-800 font-semibold">Dashboard</a>
+            <a href="index2.html" class="text-[0.8vw] ml-[2.5vw] cursor-pointer hover:bg-blue-100 rounded-lg hover:font-semibold">Compra de créditos</a>
+            <a href="#" class="text-[0.8vw] ml-[2.5vw] cursor-pointer hover:bg-blue-100 rounded-lg hover:font-semibold">Conclúidos</a>
+            <figure class="flex items-center hover:font-semibold hover:bg-gray-100 rounded-lg cursor-pointer">
+                <img src="img/Gestao.svg" alt="" class="cursor-pointer mt-[1vw] pb-5 pr-1">
+                <h3 class="text-[1vw]">Gestão de projetos</h3>
+            </figure>
+            <figure class="flex items-center hover:font-semibold hover:bg-gray-100 rounded-lg cursor-pointer">
+                <img src="img/Campanhas.svg" alt="" class="cursor-pointer mt-[1vw] pb-5 pr-1">
+                <h3 class="text-[1vw]">Campanhas</h3>
+            </figure>
+        </section>
+        <section class="grid grid-rows-1 col-span-4">
+            <section class="p-[3vw] border-b-1 border-gray-500/50">
+                <img src="img/banner.png" alt="" class="cursor-pointer min-w-[74vw] max-w-[74vw]">
+                <h1 class="text-[1vw] font-semibold pb-[1vw] pt-[2vw]">Compre pontos e distribua como quiser</h1>
+                <section class="flex justify-between">
+                    <div class="hover:shadow-lg border-1 border-gray-500/50 rounded-lg grid grid-rows-1 max-w-[20vw] p-[1vw] hover:-translate-y-2 transition-transform duration-300 hover:border-blue-500">
+                        <img src="img/ponto1.png" alt="" class="min-w-[18vw] pb-5">
+                        <small class="text-[0.8vw]">Desenvolvimento, consultoria ou UX/UI para seus projetos decolarem.</small>
+                        <div class="flex justify-between pt-[1vw]">
+                            <a href="index2.html" class="text-[1vw] cursor-pointer hover:bg-blue-100 rounded-lg font-bold">Comprar créditos</a>
+                            <img src="img/Seta.svg" alt="" class="min-w-[0.5vw] max-w-[0.5vw] cursor-pointer hover:-translate-x-2 transition-transform duration-300">
+                        </div>
+                        <small class="text-[0.8vw]">5 créditos por R$10.000,00</small>
+                    </div>
+                    <div class="hover:shadow-lg border-1 border-gray-500/50 rounded-lg grid grid-rows-1 max-w-[20vw] p-[1vw] hover:-translate-y-2 transition-transform duration-300 hover:border-blue-500">
+                        <img src="img/ponto2.png" alt="" class="min-w-[18vw] pb-[1vw]">
+                        <small class="text-[0.8vw]">Desenvolvimento de projeto de ponta a ponta, com nível de complexidade média com super desconto.</small>
+                        <div class="flex justify-between pt-[1vw]">
+                            <a href="index2.html" class="text-[1vw] cursor-pointer hover:bg-blue-100 rounded-lg font-bold">Comprar créditos</a>
+                            <img src="img/Seta.svg" alt="" class="min-w-[0.5vw] max-w-[0.5vw] cursor-pointer hover:-translate-x-2 transition-transform duration-300">
+                        </div>
+                        <small class="text-[0.8vw]">21 créditos por R$120.000,00</small>
+                    </div>
+                    <div class="hover:shadow-lg border-1 border-gray-500/50 rounded-lg grid grid-rows-1 max-w-[20vw] p-[1vw] hover:-translate-y-2 transition-transform duration-300 hover:border-blue-500">
+                        <img src="img/ponto3.png" alt="" class="min-w-[18vw] pb-[1vw]">
+                        <small class="text-[0.8vw]">Descontos cumulativos para projetos em Wordpress para 2025.</small>
+                        <div class="flex justify-between pt-[1vw]">
+                            <a href="index2.html" class="text-[1vw] cursor-pointer hover:bg-blue-100 rounded-lg font-bold">Comprar créditos</a>
+                            <img src="img/Seta.svg" alt="" class="min-w-[0.5vw] max-w-[0.5vw] cursor-pointer hover:-translate-x-2 transition-transform duration-300">
+                        </div>
+                        <small class="text-[0.8vw]">21 créditos por R$12.000,00</small>
+                    </div>
+                </section>
+            </section>
+            <section class="border-b-1 border-gray-500/50">
+                <img src="img/Logo2.svg" alt="" class="min-w-[6vw] max-w-[6vw] m-[0.5vw]">
+            </section>
+        </section>
+    </main>
+</body>
+</html>
