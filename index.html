@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br" 
+      x-data="{ 
+          tab: 'home', 
+          dark: false
+      }"
+      :data-theme="dark ? 'dark' : 'light'">
+
+<head>
+    <!-- Imports Tailwind + DaisyUI + Alpine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="min-h-screen transition-colors">
+    
+    <nav class="navbar bg-base-100 shadow-lg px-8">
+        <div class="flex-1 font-bold text-xl">DevPortfolio</div>
+        
+        <div class="flex-none gap-2">
+            <!-- Botão HOME -->
+            <button 
+                @click="tab = 'home'" 
+                class="btn btn-sm btn-ghost"
+                :class="{ 'btn-active': tab === 'home' }">
+                Home
+            </button>
+
+            <!-- Botão HOME -->
+            <button 
+                @click="tab = 'sobre'" 
+                class="btn btn-sm btn-ghost"
+                :class="{ 'btn-active': tab === 'sobre' }">
+                Sobre
+            </button>
+        
+            <!-- Botão CONTATO -->
+            <button 
+                @click="tab = 'contato'" 
+                class="btn btn-sm btn-ghost"
+                :class="{ 'btn-active': tab === 'contato' }">
+                Contato
+            </button>
+            
+            <!-- Dark Mode Toggle -->
+            <input type="checkbox" class="toggle" 
+                    x-model="dark" />
+        </div>
+    </nav>
+  
+    
+
+    <main class="p-10 max-w-5xl mx-auto">
+
+        <!-- SEÇÃO HOME -->
+        <div x-show="tab === 'home'" x-transition:enter.duration.500ms>
+            
+            <div class="hero min-h-[50vh] bg-base-200 rounded-box">
+                <div class="hero-content text-center">
+                    <div class="max-w-md">
+                        <h1 class="text-5xl font-bold">Olá, eu sou Dev</h1>
+                        <button @click="tab = 'contato'" 
+                                class="btn btn-primary mt-6">
+                            Fale Comigo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <div x-show="tab === 'sobre'"class="max-w-[70vw] mx-auto" x-transition:enter.duration.500ms>
+        <div tabindex="0" class="collapse collapse-arrow bg-base-200 border-base-300 border">
+            <div class="collapse-title font-semibold">Appsmith e funcionalidades</div>
+            <div class="collapse-content text-sm">
+                O Appsmith é uma plataforma low code licenciada pela Apache 2.0, segurança garantida pelo sistema AES256.
+            </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-arrow bg-base-200 border-base-300 border">
+            <div class="collapse-title font-semibold">Tooljet e funcionalidades</div>
+            <div class="collapse-content text-sm">
+                O Tooljet é uma plataforma low code licenciada pela Apache 2.0, segurança garantida pelo sistema AES256.
+            </div>
+        </div>
+    </div>
+  
+    <div x-show="tab === 'contato'"class="max-w-[50vw] mx-auto mt-8" x-data="{ email: '', mensagem: '', enviado: false }" x-transition:enter.duration.500ms>
+        <div class="bg-base-200 p-6 rounded-lg">
+            <div class="p-5">
+                <label class="label">Email</label>
+                <input x-model="email" class="input input-bordered w-full">
+            </div>
+            <div class="p-5">
+                <label class="label">Mensagem</label>
+                <textarea x-model="mensagem" class="textarea textarea-bordered w-full"></textarea>
+            </div>
+            <div class="p-5">
+                <button @click="enviado = true; email=''; mensagem=''" 
+                        :disabled="!email.includes('@') || mensagem.length < 1"
+                        class="btn btn-primary w-full">Enviar</button>
+            </div>
+        </div>
+
+        <div x-show="enviado" x-transition class="alert alert-success shadow-lg mt-6">
+            <span class="font-semibold">Mensagem enviada com sucesso!</span>
+        </div>
+    </div>
+
+
+</body>
+</html>
