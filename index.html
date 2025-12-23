@@ -3,54 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Freelancer</title>
+    <title>Task Manager</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="mx-auto max-w-100 mt-10">
-    <div class="grid grid-cols-3 min-w-100 p-10 gap-5 border border-gray-200 rounded-xl" x-data="{
+    <div class="grid grid-cols-2 min-w-100 p-10 gap-5 border border-gray-200 rounded-xl" x-data="{
         tags: [], 
-        parte1: '',
-        parte2: '',
-
-        get total() {
-        return this.tags.reduce((soma, t) => soma + t.valor, 0);
-        }
+        trf: '',
+        contagem: 0
     }">
-        <strong class="col-span-3"><span class="text-green-700">$</span> Orçamento</strong>
-        <input class="border rounded p-1" x-model="parte1" placeholder="Serviço">
-        <input class="border rounded p-1" x-model.number="parte2" placeholder="Valor">
-        <button class="border rounded p-1 hover:bg-black hover:text-white cursor-pointer" type="button" class="btn btn-primary" @click="
-            if (parte1 && parte2) {
-                tags.push({ servico: parte1, valor: parte2 });
-                parte1 = '';
-                parte2 = '';
+        <strong>Minhas Tarefas</strong>
+        <small class="bg-sky-200 text-center rounded-lg border border-sky-800 cursor-pointer" x-text="contagem+' Pendentes'"></small>
+        <input class="border rounded p-1" x-model="trf" placeholder="Nova tarefa">
+        <button class="border border-sky-800 rounded p-1 bg-sky-200 hover:bg-sky-800 hover:text-white hover:border-black cursor-pointer" type="button" class="btn btn-primary" @click="
+            if (trf) {
+                tags.push({ tarefa: trf});
+                trf = '';
+                contagem += 1
             }
         ">
             Confirmar
         </button>
             <div class="mt-2">
                 <template x-for="(tag, index) in tags" :key="index">
-                    <span class="badge grid grid-cols-2 justify-between min-w-100">
-                        <span x-text="`${tag.servico} - ${tag.valor}`"></span>
-                        <button class="text-red-500"
+                    <span x-data="{entregue : false}" class="badge grid grid-cols-2 justify-between min-w-100 ">
+                        <span><input type="checkbox" class="checkbox checkbox-sucess cursor-pointer" @click="entregue = !entregue; if(entregue) { contagem -= 1}; if(!entregue) { contagem += 1}"> <span x-text="tag.tarefa" :class="entregue ? 'line-through text-gray-500' : ''"></span></span>
+                        <button class="text-sky-800"
                             type="button"
-                            @click="tags.splice(index, 1)"
+                            @click="tags.splice(index, 1);
+                            if(!entregue) {contagem -= 1}"
                             aria-label="Remover"
+                            
                         >
                             ✕
                         </button>
                     </span>
                 </template>
-                <div class="mt-2 text-white bg-black rounded-lg p-1 grid grid-cols-5 justify-between min-w-80">
-                    <strong>Total:</strong>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="text-green-400" x-text="total"></span>
-                </div>
             </div>
     </div>
 </body>
 </html>
+<!--Não consegui fazer o sistema de x-show com todas, pendentes e tarefas concluidas, perdão cesimar-->
